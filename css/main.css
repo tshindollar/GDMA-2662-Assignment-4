@@ -122,12 +122,6 @@ p {
 /* display: contents; */
 /* ----- NAV ----- */
 
-.off-canvas-content .button {
-    background-color: #FFFDFB;
-    color: #46423F;
-    font-size: 2.5rem;
-    padding: 2.7rem 0 0;
-}
 
 #offCanvasRight {
     background-color: #FFFDFB;
@@ -214,14 +208,41 @@ h1 img:first-child {
     margin-top: 7em;
 }
 
-#bg-books > div:first-child {
+#header-sm {
     background-color: #FFFDFB;
-    z-index: 1;
+    z-index: 2;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
 }
+#header-sm .button {
+    background-color: #FFFDFB;
+    color: #46423F;
+    font-size: 2.5rem;
+    padding: 2.7rem 0 0;
+}
+
+.off-canvas.is-open ~ #header-sm,
+.off-canvas.is-closed ~ #header-sm {
+    -webkit-transition: -webkit-transform 0.5s ease;
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+
+.off-canvas.is-open ~ #header-sm {
+    -webkit-transform: translateX(-250px);
+    -ms-transform: translateX(-250px);
+    transform: translateX(-250px);
+}
+
+.off-canvas.is-closed ~ #header-sm {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+} 
 
 header .small-12 {
     background-color: #FFFDFB;
@@ -388,137 +409,76 @@ address li {
 /* ----- BOOK COVER ----- */
 
 #world-we-make {
-    background: url(../img/bg-world-we-make.jpg) center no-repeat;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-backgroun-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
-    height: 175px;
-    width: 113px;
+    background-image: url(../img/bg-world-we-make.jpg);
 }
 
 #mad-honey {
-    background: url(../img/bg-mad-honey.jpg) center no-repeat;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-backgroun-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
-    height: 175px;
-    width: 113px;
+    background-image: url(../img/bg-mad-honey.jpg);
 }
 
 #christmas-spirit {
-    background: url(../img/bg-christmas-spirit.jpg) center no-repeat;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-backgroun-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
-    height: 175px;
-    width: 113px;
+    background-image: url(../img/bg-christmas-spirit.jpg);
 }
 
 #appeal {
-    background: url(../img/bg-the-appeal.jpg) center no-repeat;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-backgroun-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
-    height: 175px;
-    width: 113px;
+    background-image: url(../img/bg-the-appeal.jpg);
 }
 
 #evenlyn-aubrey {
-    background: url(../img/bg-evenlyn-aubrey.jpg) center no-repeat;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-backgroun-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
-    height: 175px;
-    width: 113px;
+    background-image: url(../img/bg-evenlyn-aubrey.jpg);
 }
 
 #going-rogue {
-    background: url(../img/bg-going-rogue.jpg) center no-repeat;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-backgroun-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
-    height: 175px;
-    width: 113px;
+    background-image: url(../img/bg-going-rogue.jpg);
 }
 
 #sun-warrior {
-    background: url(../img/bg-sun-warrior.jpg) center no-repeat;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-backgroun-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
-    height: 175px;
-    width: 113px;
+    background-image: url(../img/bg-sun-warrior.jpg);
 }
 
 #normal-people {
-    background: url(../img/bg-normal-people.jpg) center no-repeat;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-backgroun-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
-    height: 175px;
-    width: 113px;
+    background-image: url(../img/bg-normal-people.jpg);
 }
 
 #tomorrow {
-    background: url(../img/bg-tomorrow.jpg) center no-repeat;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-backgroun-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
-    height: 175px;
-    width: 113px;
+    background-image: url(../img/bg-tomorrow.jpg);
 }
 
 #lessons-in-chemistry {
-    background: url(../img/bg-lessons-chemistry.jpg) center no-repeat;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-backgroun-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
-    height: 175px;
-    width: 113px;
+    background-image: url(../img/bg-lessons-chemistry.jpg);
 }
 
 #achilles {
-    background: url(../img/bg-song-achilles.jpg) center no-repeat;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-backgroun-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
-    height: 175px;
-    width: 113px;
+    background-image: url(../img/bg-song-achilles.jpg);
+}
+
+.book-cover {
+    background-position: center;
+    background-repeat: no-repeat;
+    -moz-background-size: contain;
+    -webkit-background-size: contain;
+    -o-backgroun-size: contain;
+    -ms-background-size: contain;
+    background-size: contain;
+    height: 11rem;
+    width: 95%;
 }
 
 /* ----- EVENT BLOCK ----- */
 
-#author-reading {
-    background: url(../img/bg-person-reading.jpg) center no-repeat;
+.event-photo {
+    background-position: center;
+    background-repeat: no-repeat;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-backgroun-size: cover;
     -ms-background-size: cover;
     background-size: cover;
-    height: 200px;
-    margin-bottom: 1.2em;
+    height: 11rem;
+}
+
+#author-reading {
+    background-image: url(../img/bg-person-reading.jpg);
 }
 
 #plaid-friday {

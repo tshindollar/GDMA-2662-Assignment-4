@@ -49,27 +49,38 @@
         </nav>
 
       </div>
+      <div  class="hide-for-large" id="header-sm"> <!-- NAV color -->
+        <div class="wrapper">
+
+          <div class="grid-x">
+            <div class="cell small-6 large-4">
+              <a href="#">
+                <img src="img/icon.png" alt="a-novel-idea" data-rjs="2">
+              </a>
+            </div>
+
+            <div class="cell small-6 text-right">
+              <button type="button" class="button" data-toggle="offCanvasRight"><i class="fa-solid fa-bars"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="off-canvas-content" data-off-canvas-content>
 
         <header id="bg-books"><!-- bg image -->
-          <div> <!-- NAV color -->
+          <div class="show-for-large"> <!-- NAV color -->
             <div class="wrapper">
 
               <div class="grid-x">
                 <div class="cell small-6 large-4">
                   <h1>
                     <a href="#">
-                      <img src="img/icon.png" alt="a-novel-idea" data-rjs="2" class="hide-for-large">
-                      <img src="img/wordmark.png" alt="a-novel-idea" data-rjs="2" class="show-for-large">
+                      <img src="img/wordmark.png" alt="a-novel-idea" data-rjs="2" >
                     </a>
                   </h1>
                 </div>
 
-                <div class="cell small-6 hide-for-large text-right">
-                  <button type="button" class="button" data-toggle="offCanvasRight"><i class="fa-solid fa-bars"></i></button>
-                </div>
-
-                <nav class="cell small-8 show-for-large">
+                <nav class="cell small-8">
                   <ul>
                     <li>
                         <a href="#">Our Story</a>
@@ -116,7 +127,7 @@
 
               <div class="owl-carousel owl-theme grid-x">
                 <section class="item cell large-4">
-                  <div id="world-we-make"></div>
+                  <div id="world-we-make" class="book-cover"></div>
                   <div class="show-for-large">
                     <header>
                     <h3>The World We Make</h3>
@@ -127,7 +138,7 @@
                 </section>
 
                 <section class="item cell large-4">
-                  <div id="mad-honey"></div>
+                  <div id="mad-honey" class="book-cover"></div>
                   <div class="show-for-large">
                     <header>
                       <h3>Mad Honey</h3>
@@ -138,7 +149,7 @@
                 </section>
 
                 <section class="item cell large-4">
-                  <div id="christmas-spirit"></div>
+                  <div id="christmas-spirit" class="book-cover"></div>
                   <div class="show-for-large">
                     <header>
                       <h3>The Christmas Spirit</h3>
@@ -149,7 +160,7 @@
                 </section>
 
                 <section class="item cell large-4">
-                  <div id="appeal"></div>
+                  <div id="appeal" class="book-cover"></div>
                   <div class="show-for-large">
                     <header>
                       <h3>The Appeal</h3>
@@ -160,7 +171,7 @@
                 </section>
 
                 <section class="item cell large-4">
-                  <div id="evenlyn-aubrey"></div>
+                  <div id="evenlyn-aubrey" class="book-cover"></div>
                   <div class="show-for-large">
                     <header>
                       <h3>The Stolen Book of Evenlyn Aubrey</h3>
@@ -171,7 +182,7 @@
                 </section>
 
                 <section class="item cell large-4">
-                  <div id="going-rogue"></div>
+                  <div id="going-rogue" class="book-cover"></div>
                   <div class="show-for-large">
                     <header>
                       <h3>Going Rogue</h3>
@@ -182,7 +193,7 @@
                 </section>
               </div>
 
-              <p class="text-center"><a class="btn-primary" href="#">View More Picks</a></p>
+              <p class="text-center"><a class="btn-primary" href="#">View More</a></p>
             </div>
           </section>
 
@@ -194,7 +205,7 @@
 
               <div class="owl-carousel owl-theme grid-x">
                 <section class="item cell large-2">
-                  <div id="sun-warrior"></div>
+                  <div id="sun-warrior" class="book-cover"></div>
                   <header class="sr-only">
                     <h3>Heart of the Sun Warrior</h3>
                     <p>By: Sue Lyn Tan</p>
@@ -202,7 +213,7 @@
                 </section>
 
                 <section class="item cell large-2">
-                  <div id="normal-people"></div>
+                  <div id="normal-people" class="book-cover"></div>
                   <header class="sr-only">
                     <h3>Normal People</h3>
                     <p>By: Sally Rooney</p>
@@ -210,7 +221,7 @@
                 </section>
 
                 <section class="item cell large-2">
-                  <div id="tomorrow"></div>
+                  <div id="tomorrow" class="book-cover"></div>
                   <header class="sr-only">
                     <h3>Tomorrow and Tomorrow and Tomorrow</h3>
                     <p>By: Gabrielle Zevin</p>
@@ -218,7 +229,7 @@
                 </section>
 
                 <section class="item cell large-2">
-                  <div id="lessons-in-chemistry"></div>
+                  <div id="lessons-in-chemistry" class="book-cover"></div>
                   <header class="sr-only">
                     <h3>Lessons in Chemistry</h3>
                     <p>By: Bonnie Garmus</p>
@@ -226,7 +237,7 @@
                 </section>
 
                 <section class="item cell large-2">
-                  <div id="achilles"></div>
+                  <div id="achilles" class="book-cover"></div>
                   <header class="sr-only">
                     <h3>Song of Achilles</h3>
                     <p>By: Madeline Miller</p>
@@ -240,7 +251,7 @@
 
           <div class="soft-cream" id="event-block"> <!-- color -->
             <section class="wrapper grid-x">
-              <div class="cell small-12 large-6" id="author-reading"></div> <!-- photo -->
+              <div class="cell small-12 large-6 event-photo" id="author-reading"></div> <!-- photo -->
 
               <div class="cell small-12 large-6">
                 <header>
