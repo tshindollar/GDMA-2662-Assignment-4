@@ -24,9 +24,37 @@
 /* ----- UNIVERSAL ----- */
 
 
-html {
-    font: 1rem 'Montserrat', sans-serif;
+body {
+    font: 1rem'Noto Sans', sans-serif;
+    color: #46423F;
 
+}
+
+h1 {
+    margin: 0 0 1rem 0;
+    padding: 2rem 0 0;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    font-family: 'Noto Serif', serif;
+    font-weight: 600;
+    margin: 0;
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-family: 'Noto Serif', serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 3em 0 .9em;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 2em;
+    margin: 0;
 }
 
 @media screen and (min-width: 40em) {
@@ -46,6 +74,11 @@ html {
     4.0 - ELEMENTS
 -------------------------------------------------------------- */
 
+/* ----- TYPOGRAPHY ----- */
+
+/* ----- ANCHOR ----- */
+
+/* ----- HERO ----- */
 
 /*--------------------------------------------------------------
     5.0 - OBJECTS
@@ -54,7 +87,7 @@ html {
 /* ----- FRAMEWORK ----- */
 
 .wrapper {
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -85,8 +118,545 @@ html {
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
 
+/* Apply this to New Arrivals on Home page */
+/* display: contents; */
+/* ----- NAV ----- */
+
+.off-canvas-content .button {
+    background-color: #FFFDFB;
+    color: #46423F;
+    font-size: 2.5rem;
+    padding: 2.7rem 0 0;
+}
+
+#offCanvasRight {
+    background-color: #FFFDFB;
+    box-shadow: inset 4px 0 20px rgba(36 18 7 / 18%)
+}
+
+#offCanvasRight ul{
+    list-style-type: none;
+    margin: 0;
+}
+
+#offCanvasRight li {
+    background-color: #8D4517;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 4px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-transform: uppercase;  
+}
+
+#offCanvasRight a {
+    color: #FFFDFB;
+}
+
+h1 img:first-child {
+    width: 2rem;
+}
+
+
+/* h1 img:last-child {
+    width: 2rem;
+} */
+
+@media screen and (min-width: 768px) {
+
+    .wrapper {
+        width: 80%;
+    }    
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    .wrapper {
+        width: 70%;
+    }
+
+    nav a:hover {
+        border-bottom: 2px #C0794B solid;
+    }
+    
+}
+
+
+
+
+/* ----- CAROUSEL ----- */
+
+.owl-nav,
+.owl-dots {
+    display: none;
+}
+
+.owl-carousel {
+    margin: 3em 0 3.5em;
+}
+
+.carousel {
+    padding: 5em 0;
+}
+
+
+/* ----- HERO ----- */
+
+#bg-books {
+    background: url(../img/bg-books.jpg) center no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-backgroun-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    padding: 4em 0;
+    margin-top: 7em;
+}
+
+#bg-books > div:first-child {
+    background-color: #FFFDFB;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+header .small-12 {
+    background-color: #FFFDFB;
+    padding: 4em 0; 
+}
+
+header .small-12 p:first-child {
+    font-size: 2.5rem;
+    line-height: 3.95rem;
+    text-transform: uppercase;
+    font-family: 'Noto Serif', serif;
+    margin: 0;
+}
+
+header .small-12 p:last-of-type {
+    padding: 0 1.5em 0;
+}
+
+#bg-books span {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+#bg-books .text-center p+p {
+    margin-bottom: 2em;
+}
+
+#bg-books {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#bg-books:before {
+    background-color: rgba(125, 70, 34, 0.5);
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#bg-books li {
+    list-style: none;
+    margin-bottom: 2.2em;
+}
+
+#bg-books ul a {
+    font-size: .9rem;
+    text-transform: capitalize;
+} 
+
+#bg-books ul {
+    margin-top: 3.5em;
+}
+
+header .small-12 {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+/* header .small-12 :nth-child(2):before {
+    left: 103px;
+}
+
+header .small-12 :nth-child(2):after {
+    right: 103px;
+}
+
+header .small-12 :nth-child(2):before,
+header .small-12 :nth-child(2):after {
+    content: '';
+    width: 6px;
+    height: 1.5px;
+    display: block;
+    position: absolute;
+    top: 158px;
+    background-color:#32453F ;
+} */ 
+
+/* ----- SUBSCRIBE ----- */
+
+#subscribe {
+    background-color: #F3F4ED;
+    padding: 4em 0;
+}
+
+#subscribe h2 {
+    margin-bottom: .5em;
+}
+
+form {
+    margin-top: 1.5em;
+}
+
+form button {
+    margin-top: 1em;
+}
+
+/* not applying */
+/* label {
+    height: 3em;
+    border-radius: 4px;
+    border: 1px #46423F solid;
+    color: #46423F;
+} */
+/* ----- FOOTER ----- */
+
+footer {
+    background-color: #32453F;
+    color: #fff;
+    padding-bottom: 4em;
+}
+
+footer li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+/* footer > div {
+    border-top: 1px #fff solid;
+} */
+
+footer a {
+    color: #fff;
+
+}
+
+footer img {
+    width: 175px;
+    margin: 4em 0 1em;
+}
+
+footer a+ul {
+    border-top: .5px #fff solid;
+    width: 120px;
+    margin: 0 auto;
+    padding-top: 1em;
+}
+
+.fa-brands {
+    font-size: 1.3em;
+    padding: 0 .3em;
+} 
+
+address ul {
+    margin: 0;
+}
+
+footer p,
+address li {
+    font-size: .85em;
+    margin-bottom: .5em;
+}
+
+address li {
+    display: block;
+    font-style: normal;
+}
+
+/* ----- BOOK COVER ----- */
+
+#world-we-make {
+    background: url(../img/bg-world-we-make.jpg) center no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-backgroun-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    height: 175px;
+    width: 113px;
+}
+
+#mad-honey {
+    background: url(../img/bg-mad-honey.jpg) center no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-backgroun-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    height: 175px;
+    width: 113px;
+}
+
+#christmas-spirit {
+    background: url(../img/bg-christmas-spirit.jpg) center no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-backgroun-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    height: 175px;
+    width: 113px;
+}
+
+#appeal {
+    background: url(../img/bg-the-appeal.jpg) center no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-backgroun-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    height: 175px;
+    width: 113px;
+}
+
+#evenlyn-aubrey {
+    background: url(../img/bg-evenlyn-aubrey.jpg) center no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-backgroun-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    height: 175px;
+    width: 113px;
+}
+
+#going-rogue {
+    background: url(../img/bg-going-rogue.jpg) center no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-backgroun-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    height: 175px;
+    width: 113px;
+}
+
+#sun-warrior {
+    background: url(../img/bg-sun-warrior.jpg) center no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-backgroun-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    height: 175px;
+    width: 113px;
+}
+
+#normal-people {
+    background: url(../img/bg-normal-people.jpg) center no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-backgroun-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    height: 175px;
+    width: 113px;
+}
+
+#tomorrow {
+    background: url(../img/bg-tomorrow.jpg) center no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-backgroun-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    height: 175px;
+    width: 113px;
+}
+
+#lessons-in-chemistry {
+    background: url(../img/bg-lessons-chemistry.jpg) center no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-backgroun-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    height: 175px;
+    width: 113px;
+}
+
+#achilles {
+    background: url(../img/bg-song-achilles.jpg) center no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-backgroun-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    height: 175px;
+    width: 113px;
+}
+
+/* ----- EVENT BLOCK ----- */
+
+#author-reading {
+    background: url(../img/bg-person-reading.jpg) center no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-backgroun-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    height: 200px;
+    margin-bottom: 1.2em;
+}
+
+#plaid-friday {
+    background: url(../img/bg-fall-coco.jpg) center no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-backgroun-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    height: 200px;
+    margin-bottom: 1.2em;
+}
+
+#small-saturday {
+    background: url(../img/bg-christmas-gifts.jpg) center no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-backgroun-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    height: 200px;
+    margin-bottom: 1.2em;
+}
+
+#first-friday {
+    background: url(../img/bg-art-gallery.jpg) center no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-backgroun-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    height: 200px;
+    margin-bottom: 1.2em;
+}
+
+#event-block {
+    padding: 5em 0 1em;
+}
+
+#event-block span {
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+#event-block h2 {
+    margin: .2em 0 .5em;
+}
+
+#event-block ul {
+    list-style-type: none;
+    margin: 0 0 2.5em;
+}
+
+#event-block li {
+    margin-bottom: .8em;
+}
+
+/* #author-reading i {
+    text-align: right;
+} */
+
+#event-block i {
+    padding-right: .5em;
+}
+
+#event-block header p {
+    margin: 0;
+}
 
 /*--------------------------------------------------------------
     7.0 - UTILITY
 -------------------------------------------------------------- */
 
+
+/* ----- BUTTONS ----- */
+
+.btn-primary {
+    background-color: #8D4517;
+    color: #FFFDFB;
+    border-radius: 4px;
+    padding: 13px 20px;
+}
+
+.btn-primary:hover {
+    background-color: #C0794B;
+    color: #FFFDFB; 
+}
+
+.btn-secondary {
+    background-color: #32453F;
+    color: #FFFDFB;
+    border-radius: 4px;
+    padding: 15px 32px;
+}
+
+.btn-secondary:hover {
+    background-color: #6B876E;
+    color: #FFFDFB; 
+}
+
+
+.btn-tertiary {
+    background-color: none;
+    color: #FFFDFB; 
+    border: 1px #FFFDFB solid;
+    border-radius: 4px;
+    padding: 13px 20px;
+    text-transform: uppercase;
+}
+
+.btn-tertiary:hover {
+    background-color: #FFFDFB; 
+    border: 1px #FFFDFB solid;
+    color: #46423F;
+}
+
+/* ----- BG-COLOR ----- */
+
+.soft-cream {
+    background-color: #FFFAF4;
+}
+
+.lighter-soft-cream {
+    background-color: #FFFDFB;
+}
+
+/* ----- SCREENREADER ----- */
+
+.sr-only {
+    position: absolute;
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0,0,0,0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+}
