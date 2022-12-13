@@ -31,30 +31,39 @@ body {
 }
 
 h1 {
-    margin: 0 0 1rem 0;
-    padding: 2rem 0 0;
+    font-size: 2.5rem;
+    line-height: 2.95rem;
+    text-transform: uppercase;
+    font-family: 'IBM Plex Serif', serif;
+    margin: 0;
 }
 
+
+
 h2 {
-    font-size: 2rem;
+    font-size: 2.3rem;
     line-height: 2.4rem;
-    font-family: 'Noto Serif', serif;
+    font-family: 'IBM Plex Serif', serif;
     font-weight: 600;
     margin: 0;
 }
 
 h4 {
     font-size: 1.2rem;
-    font-family: 'Noto Serif', serif;
+    font-family: 'IBM Plex Serif', serif;
     font-weight: 600;
     text-transform: uppercase;
     margin: 3em 0 .9em;
 }
 
 p {
-    font-size: 1rem;
-    line-height: 2em;
+    font-size: 1.1rem;
+    line-height: 2rem;
     margin: 0;
+}
+
+li {
+    font-size: 1.1rem;
 }
 
 @media screen and (min-width: 40em) {
@@ -118,10 +127,7 @@ p {
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
 
-/* Apply this to New Arrivals on Home page */
-/* display: contents; */
 /* ----- NAV ----- */
-
 
 #offCanvasRight {
     background-color: #FFFDFB;
@@ -147,14 +153,48 @@ p {
     color: #FFFDFB;
 }
 
-h1 img:first-child {
-    width: 2rem;
+.off-canvas.is-open ~ #header-sm,
+.off-canvas.is-transition-push ~ #header-sm {
+    -webkit-transition: -webkit-transform 0.5s ease;
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 
-/* h1 img:last-child {
+.off-canvas.is-open ~ #header-sm {
+    -webkit-transform: translateX(-250px);
+    -ms-transform: translateX(-250px);
+    transform: translateX(-250px);
+}
+
+.off-canvas.is-closed ~ #header-sm {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+} 
+
+#header-sm {
+    background-color: #FFFDFB;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#header-sm .button {
+    background-color: #FFFDFB;
+    color: #46423F;
+    font-size: 2.5rem;
+    padding: 2.7rem 0 0;
+}
+
+a img {
     width: 2rem;
-} */
+    margin: 0;
+    padding: 2.7rem 0 0;
+}
 
 @media screen and (min-width: 768px) {
 
@@ -177,24 +217,6 @@ h1 img:first-child {
 }
 
 
-
-
-/* ----- CAROUSEL ----- */
-
-.owl-nav,
-.owl-dots {
-    display: none;
-}
-
-.owl-carousel {
-    margin: 3em 0 3.5em;
-}
-
-.carousel {
-    padding: 5em 0;
-}
-
-
 /* ----- HERO ----- */
 
 #bg-books {
@@ -206,59 +228,14 @@ h1 img:first-child {
     background-size: cover;
     padding: 4em 0;
     margin-top: 7em;
-}
 
-#header-sm {
-    background-color: #FFFDFB;
-    z-index: 2;
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
-    width: 100%;
-}
-#header-sm .button {
-    background-color: #FFFDFB;
-    color: #46423F;
-    font-size: 2.5rem;
-    padding: 2.7rem 0 0;
 }
 
-.off-canvas.is-open ~ #header-sm,
-.off-canvas.is-closed ~ #header-sm {
-    -webkit-transition: -webkit-transform 0.5s ease;
-    transition: -webkit-transform 0.5s ease;
-    transition: transform 0.5s ease;
-    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-}
-
-
-.off-canvas.is-open ~ #header-sm {
-    -webkit-transform: translateX(-250px);
-    -ms-transform: translateX(-250px);
-    transform: translateX(-250px);
-}
-
-.off-canvas.is-closed ~ #header-sm {
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    transform: translate(0, 0);
-} 
-
-header .small-12 {
-    background-color: #FFFDFB;
-    padding: 4em 0; 
-}
-
-header .small-12 p:first-child {
-    font-size: 2.5rem;
+#bg-books h1 {
     line-height: 3.95rem;
-    text-transform: uppercase;
-    font-family: 'Noto Serif', serif;
-    margin: 0;
-}
-
-header .small-12 p:last-of-type {
-    padding: 0 1.5em 0;
 }
 
 #bg-books span {
@@ -268,13 +245,7 @@ header .small-12 p:last-of-type {
 }
 
 #bg-books .text-center p+p {
-    margin-bottom: 2em;
-}
-
-#bg-books {
-    position: relative;
-    top: 0;
-    left: 0;
+    margin: 2em 0 3em;
 }
 
 #bg-books:before {
@@ -293,7 +264,6 @@ header .small-12 p:last-of-type {
 }
 
 #bg-books ul a {
-    font-size: .9rem;
     text-transform: capitalize;
 } 
 
@@ -301,57 +271,67 @@ header .small-12 p:last-of-type {
     margin-top: 3.5em;
 }
 
-header .small-12 {
+#bg-shop-blocks {
+    background: url(../img/bg-shop-the-blocks.jpg) center no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-backgroun-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    padding: 4em 0 5em;
+    margin-top: 7em;
     position: relative;
     top: 0;
     left: 0;
 }
 
-/* header .small-12 :nth-child(2):before {
-    left: 103px;
+#bg-shop-blocks div:last-child {
+    margin: 0 auto;
 }
 
-header .small-12 :nth-child(2):after {
-    right: 103px;
+#bg-shop-blocks div:last-child .large-4 {
+    color: #FFFDFB;
+    z-index: 1;
+    margin-bottom: 4.5em;
 }
 
-header .small-12 :nth-child(2):before,
-header .small-12 :nth-child(2):after {
+#bg-shop-blocks .header-bg-color p:first-child {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: .8em;
+}
+
+#bg-shop-blocks ul {
+    list-style-type: none;
+    margin: 2em 0 3em;
+}
+
+#bg-shop-blocks li {
+    margin-bottom: 1.1em;
+}
+
+#bg-shop-blocks:before {
+    background-color: rgba(72, 88, 77, 0.85);
+    width: 100%;
+    height: 100%;
     content: '';
-    width: 6px;
-    height: 1.5px;
-    display: block;
     position: absolute;
-    top: 158px;
-    background-color:#32453F ;
-} */ 
-
-/* ----- SUBSCRIBE ----- */
-
-#subscribe {
-    background-color: #F3F4ED;
-    padding: 4em 0;
+    top: 0;
+    left: 0;
 }
 
-#subscribe h2 {
-    margin-bottom: .5em;
+#bg-shop-blocks i {
+    padding-right: 0.5em;
 }
 
-form {
-    margin-top: 1.5em;
+.header-bg-color {
+    background-color: #FFFDFB;
+    padding: 4.5em 1.6em; 
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
-form button {
-    margin-top: 1em;
-}
-
-/* not applying */
-/* label {
-    height: 3em;
-    border-radius: 4px;
-    border: 1px #46423F solid;
-    color: #46423F;
-} */
 /* ----- FOOTER ----- */
 
 footer {
@@ -365,23 +345,19 @@ footer li {
     display: inline-block;
 }
 
-/* footer > div {
-    border-top: 1px #fff solid;
-} */
-
 footer a {
     color: #fff;
-
 }
 
 footer img {
-    width: 175px;
+    padding-left: 23px;
+    width: 240px;
     margin: 4em 0 1em;
 }
 
 footer a+ul {
     border-top: .5px #fff solid;
-    width: 120px;
+    width: 130px;
     margin: 0 auto;
     padding-top: 1em;
 }
@@ -406,7 +382,42 @@ address li {
     font-style: normal;
 }
 
+/* ----- CAROUSEL ----- */
+
+.owl-nav,
+.owl-dots {
+    display: none;
+}
+
+.owl-carousel {
+    margin: 3em 0 3.5em;
+}
+
+.carousel {
+    padding: 5em 0;
+}
+
+.carousel .wrapper {
+    display: contents;
+}
+
+.owl-stage {
+    padding: 0 1rem;
+}
+
 /* ----- BOOK COVER ----- */
+
+.book-cover {
+    background-position: center;
+    background-repeat: no-repeat;
+    -moz-background-size: contain;
+    -webkit-background-size: contain;
+    -o-backgroun-size: contain;
+    -ms-background-size: contain;
+    background-size: contain;
+    height: 13rem;
+    width: 95%;
+}
 
 #world-we-make {
     background-image: url(../img/bg-world-we-make.jpg);
@@ -452,18 +463,6 @@ address li {
     background-image: url(../img/bg-song-achilles.jpg);
 }
 
-.book-cover {
-    background-position: center;
-    background-repeat: no-repeat;
-    -moz-background-size: contain;
-    -webkit-background-size: contain;
-    -o-backgroun-size: contain;
-    -ms-background-size: contain;
-    background-size: contain;
-    height: 11rem;
-    width: 95%;
-}
-
 /* ----- EVENT BLOCK ----- */
 
 .event-photo {
@@ -474,43 +473,7 @@ address li {
     -o-backgroun-size: cover;
     -ms-background-size: cover;
     background-size: cover;
-    height: 11rem;
-}
-
-#author-reading {
-    background-image: url(../img/bg-person-reading.jpg);
-}
-
-#plaid-friday {
-    background: url(../img/bg-fall-coco.jpg) center no-repeat;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-backgroun-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
-    height: 200px;
-    margin-bottom: 1.2em;
-}
-
-#small-saturday {
-    background: url(../img/bg-christmas-gifts.jpg) center no-repeat;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-backgroun-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
-    height: 200px;
-    margin-bottom: 1.2em;
-}
-
-#first-friday {
-    background: url(../img/bg-art-gallery.jpg) center no-repeat;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-backgroun-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
-    height: 200px;
+    height: 13rem;
     margin-bottom: 1.2em;
 }
 
@@ -525,21 +488,17 @@ address li {
 }
 
 #event-block h2 {
-    margin: .2em 0 .5em;
+    margin: .8em 0 .6em;
 }
 
 #event-block ul {
     list-style-type: none;
-    margin: 0 0 2.5em;
+    margin: 0 0 1.8em;
 }
 
 #event-block li {
     margin-bottom: .8em;
 }
-
-/* #author-reading i {
-    text-align: right;
-} */
 
 #event-block i {
     padding-right: .5em;
@@ -549,14 +508,57 @@ address li {
     margin: 0;
 }
 
+#author-reading {
+    background-image: url(../img/bg-person-reading.jpg);
+}
+
+#plaid-friday {
+    background-image: url(../img/bg-fall-coco.jpg);
+}
+
+#small-saturday {
+    background-image: url(../img/bg-christmas-gifts.jpg);
+}
+
+#first-friday {
+    background-image: url(../img/bg-art-gallery.jpg);
+}
+
+/* ----- SUBSCRIBE ----- */
+
+#subscribe {
+    background-color: #F3F4ED;
+    padding: 4em 0;
+}
+
+#subscribe h2 {
+    margin-bottom: .5em;
+}
+
+form {
+    margin-top: 1.5em;
+}
+
+form button {
+    margin-top: 1em;
+}
+
+/* not applying */
+/* label {
+    height: 3em;
+    border-radius: 4px;
+    border: 1px #46423F solid;
+    color: #46423F;
+} */
+
 /*--------------------------------------------------------------
     7.0 - UTILITY
 -------------------------------------------------------------- */
 
-
 /* ----- BUTTONS ----- */
 
 .btn-primary {
+    font-size: 1.1rem;
     background-color: #8D4517;
     color: #FFFDFB;
     border-radius: 4px;
@@ -569,6 +571,7 @@ address li {
 }
 
 .btn-secondary {
+    font-size: 1.1rem;
     background-color: #32453F;
     color: #FFFDFB;
     border-radius: 4px;
@@ -580,8 +583,8 @@ address li {
     color: #FFFDFB; 
 }
 
-
 .btn-tertiary {
+    font-size: 1.1rem;
     background-color: none;
     color: #FFFDFB; 
     border: 1px #FFFDFB solid;
@@ -604,6 +607,12 @@ address li {
 
 .lighter-soft-cream {
     background-color: #FFFDFB;
+}
+
+/* ----- MARGIN----- */
+
+.margin {
+    margin: 2.5em 0 3em;
 }
 
 /* ----- SCREENREADER ----- */
