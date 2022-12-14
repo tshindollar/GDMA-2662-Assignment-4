@@ -23,47 +23,64 @@
 
 /* ----- UNIVERSAL ----- */
 
+h1,
+h2,
+h3,
+h4 {
+    color: #46423F;
+}
+
+h1,
+h2,
+h4 {
+    font-family: 'IBM Plex Serif', serif; 
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+p, 
+li {
+    font-size: 1.1rem;
+}
+
+h2, 
+h4 {
+    font-weight: 600;
+}
+
+h1,
+h4 {
+    text-transform: uppercase;
+}
 
 body {
     font: 1rem'Noto Sans', sans-serif;
     color: #46423F;
-
 }
 
 h1 {
     font-size: 2.5rem;
     line-height: 2.95rem;
-    text-transform: uppercase;
-    font-family: 'IBM Plex Serif', serif;
-    margin: 0;
+    font-weight: 500;
 }
-
-
 
 h2 {
     font-size: 2.3rem;
     line-height: 2.4rem;
-    font-family: 'IBM Plex Serif', serif;
-    font-weight: 600;
-    margin: 0;
 }
 
 h4 {
     font-size: 1.2rem;
-    font-family: 'IBM Plex Serif', serif;
-    font-weight: 600;
-    text-transform: uppercase;
     margin: 3em 0 .9em;
+    color: #fff;
 }
 
 p {
-    font-size: 1.1rem;
     line-height: 2rem;
-    margin: 0;
-}
-
-li {
-    font-size: 1.1rem;
 }
 
 @media screen and (min-width: 40em) {
@@ -73,13 +90,26 @@ li {
 }
 
 @media screen and (min-width: 64em) {
+
+    li,
+    p {
+        font-size: 1rem;
+    }
+
     html {
         font: .9rem;
+    }
+
+    h1 {
+        font-size: 3rem;
     }
 
     h4 {
         margin: 0;
     }
+
+ 
+    
 }
 
 
@@ -108,8 +138,6 @@ li {
     max-width: 100%;
 }
 
-
-
 @media screen and (min-width: 768px) {
 
     .wrapper {
@@ -117,24 +145,25 @@ li {
     }    
 }
 
-
 @media screen and (min-width: 1024px) {
 
     .wrapper {
         width: 70%;
     }
-    
 }
 
 
 /*--------------------------------------------------------------
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
+/* ----- OFF-CANVAS----- */
 
-/* ----- NAV ----- */
+#offCanvasRight,
+#offCanvasRight a {
+    color: #FFFDFB;
+}
 
 #offCanvasRight {
-    background-color: #FFFDFB;
     box-shadow: inset 4px 0 20px rgba(36 18 7 / 18%)
 }
 
@@ -153,33 +182,44 @@ li {
     text-transform: uppercase;  
 }
 
-#offCanvasRight a {
-    color: #FFFDFB;
-}
-
-.off-canvas.is-open ~ #header,
-.off-canvas.is-transition-push ~ #header {
+.off-canvas.is-open ~ .nav,
+.off-canvas.is-transition-push ~ .nav {
     -webkit-transition: -webkit-transform 0.5s ease;
     transition: -webkit-transform 0.5s ease;
     transition: transform 0.5s ease;
     transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
-
-.off-canvas.is-open ~ #header {
+.off-canvas.is-open ~ .nav {
     -webkit-transform: translateX(-250px);
     -ms-transform: translateX(-250px);
     transform: translateX(-250px);
 }
 
-.off-canvas.is-closed ~ #header {
+.off-canvas.is-closed ~ .nav {
     -webkit-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
 } 
 
-#header {
+/* ----- NAV ----- */
+
+.nav,
+.nav .button {
     background-color: #FFFDFB;
+}
+
+#bg-books li,
+#bg-shop-blocks ul {
+    list-style-type: none;
+}
+
+.nav .button,
+a img  {
+    padding: 2.7rem 0 0;
+}
+
+.nav {
     z-index: 2;
     position: fixed;
     top: 0;
@@ -193,16 +233,28 @@ a img {
 }
 
 #bg-books li {
-    list-style: none;
     margin-bottom: 2.2em;
 }
 
-#bg-books ul a {
+/* #bg-books ul a {
     text-transform: capitalize;
-} 
+}  */
 
 #bg-books ul {
     margin-top: 3.5em;
+}
+
+.nav .button {
+    color: #46423F;
+    font-size: 2.5rem;
+}
+
+#bg-shop-blocks ul {
+    margin: 2em 0 3em;
+}
+
+#bg-shop-blocks li {
+    margin-bottom: 1.1em;
 }
 
 @media screen and (min-width: 768px) {
@@ -219,51 +271,95 @@ a img {
         width: 70%;
     }
 
-    nav li {
-        display: inline-block;
+    header .wrapper {
+        padding: 3em 0 0;
     }
 
-    #bg-books li {
-        margin: 0;
-    }
-
-    nav a:hover {
-        border-bottom: 2px #C0794B solid;
-    }
-    
     a img {
-        width: 8rem;
-        padding: 0;
+        width: 11rem;
+        padding: 0;  
     }
 
     #bg-books ul {
-        margin: 1em 0 0;
+        margin: 0.5em 0 0 0;
     }
+
+    header nav li {
+        display: inline-block;
+    }
+
+    header nav ul a {
+        text-transform: uppercase;
+        color: #46423F;
+        margin-left: 4em;
+        font-weight: 500;
+    } 
+
+
+    nav a:hover {
+        border-bottom: 2px #C0794B solid;
+        color: #46423F;
+    }
+
+
+    /* #bg-books div {
+        padding: 2.5em 0 1.5em;
+    } */
 }
+
 
 
 /* ----- HERO ----- */
 
+#bg-books,
+#bg-shop-blocks {
+    padding: 4em 0 5em;
+    margin-top: 7em;
+}
+
+#bg-books,
+#bg-books:before,
+#bg-shop-blocks,
+#bg-shop-blocks:before,
+.header-bg-color {
+    top: 0;
+    left: 0;
+}
+
+#bg-books,
+#bg-shop-blocks,
+.header-bg-color {
+    position: relative;
+}
+
+#bg-shop-blocks div:last-child .large-4,
+#bg-shop-blocks h1 {
+    color: #FFFDFB;
+}
+
+#bg-shop-blocks:before,
+#bg-books:before  {
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+}
+
+#bg-shop-blocks,
 #bg-books {
-    background: url(../img/bg-books.jpg) center no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-backgroun-size: cover;
     -ms-background-size: cover;
     background-size: cover;
-    padding: 4em 0;
-    margin-top: 7em;
-
-    position: relative;
-    top: 0;
-    left: 0;
 }
 
-#header .button {
-    background-color: #FFFDFB;
-    color: #46423F;
-    font-size: 2.5rem;
-    padding: 2.7rem 0 0;
+/* I don't think this is working correctly */
+
+#bg-books {
+    background: url(../img/bg-books.jpg);
 }
 
 #bg-books h1 {
@@ -282,35 +378,13 @@ a img {
 
 #bg-books:before {
     background-color: rgba(125, 70, 34, 0.5);
-    width: 100%;
-    height: 100%;
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
 }
-
 
 #bg-shop-blocks {
-    background: url(../img/bg-shop-the-blocks.jpg) center no-repeat;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-backgroun-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
-    padding: 4em 0 5em;
-    margin-top: 7em;
-    position: relative;
-    top: 0;
-    left: 0;
-}
-
-#bg-shop-blocks div:last-child {
-    margin: 0 auto;
+    background: url(../img/bg-shop-the-blocks.jpg);
 }
 
 #bg-shop-blocks div:last-child .large-4 {
-    color: #FFFDFB;
     z-index: 1;
     margin-bottom: 4.5em;
 }
@@ -321,23 +395,8 @@ a img {
     margin-bottom: .8em;
 }
 
-#bg-shop-blocks ul {
-    list-style-type: none;
-    margin: 2em 0 3em;
-}
-
-#bg-shop-blocks li {
-    margin-bottom: 1.1em;
-}
-
 #bg-shop-blocks:before {
     background-color: rgba(72, 88, 77, 0.85);
-    width: 100%;
-    height: 100%;
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
 #bg-shop-blocks i {
@@ -347,33 +406,31 @@ a img {
 .header-bg-color {
     background-color: #FFFDFB;
     padding: 4.5em 1.6em; 
-    position: relative;
-    top: 0;
-    left: 0;
 }
 
 
 @media screen and (min-width: 1024px) {
 
-    #bg-books {
-        margin-top: 3em;
+    #bg-books span {
+        font-size: 1.2rem;
     }
 
-    /* #bg-books div {
-        padding: 2.5em 0 1.5em;
-    } */
-
-    #bg-books nav ul {
-        margin-top: 0;
-    }
-    
+    #bg-books,
+    #bg-shop-blocks {
+        padding: 4em 0 8em;
+    }  
 }
+
 
 /* ----- FOOTER ----- */
 
+footer,
+footer a {
+    color: #fff;
+}
+
 footer {
     background-color: #32453F;
-    color: #fff;
     padding: 5em 0;
 }
 
@@ -382,12 +439,9 @@ footer li {
     display: inline-block;
 }
 
-footer a {
-    color: #fff;
-}
 
 footer img {
-    padding-left: 23px;
+    padding: 0 0 0 23px;
     width: 240px;
     margin-bottom: 1em;
 }
@@ -483,6 +537,12 @@ address li {
 
 .owl-stage {
     padding: 0 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .carousel .wrapper {
+        display: block;
+    }
 }
 
 /* ----- BOOK COVER ----- */
@@ -614,7 +674,6 @@ address li {
 }
 
 @media screen and (min-width: 1024px) {
-
     
     
 }
@@ -662,45 +721,53 @@ form button {
 
 /* ----- BUTTONS ----- */
 
-.btn-primary {
+.btn-primary,
+.btn-primary:hover,
+.btn-secondary,
+.btn-secondary:hover,
+.btn-tertiary {
+    color: #FFFDFB; 
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-tertiary {
     font-size: 1.1rem;
-    background-color: #8D4517;
-    color: #FFFDFB;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-tertiary {
     border-radius: 4px;
+}
+
+.btn-primary {
+    background-color: #8D4517;
     padding: 13px 20px;
 }
 
 .btn-primary:hover {
     background-color: #C0794B;
-    color: #FFFDFB; 
 }
 
 .btn-secondary {
-    font-size: 1.1rem;
     background-color: #32453F;
-    color: #FFFDFB;
-    border-radius: 4px;
     padding: 15px 32px;
 }
 
 .btn-secondary:hover {
     background-color: #6B876E;
-    color: #FFFDFB; 
 }
 
 .btn-tertiary {
-    font-size: 1.1rem;
     background-color: none;
-    color: #FFFDFB; 
     border: 1px #FFFDFB solid;
-    border-radius: 4px;
     padding: 13px 20px;
     text-transform: uppercase;
 }
 
 .btn-tertiary:hover {
-    background-color: #FFFDFB; 
-    border: 1px #FFFDFB solid;
+    background-color: #FFFDFB;
     color: #46423F;
 }
 
