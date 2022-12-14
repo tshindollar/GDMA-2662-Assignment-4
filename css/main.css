@@ -104,10 +104,20 @@ p {
         font-size: 3rem;
     }
 
+    h3 {
+        font-size: 1.45rem;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 500;
+        margin-top: 1.5em;
+    }
+
     h4 {
         margin: 0;
     }
 
+    p {
+        line-height: 1.8em;
+    }
  
     
 }
@@ -249,7 +259,7 @@ a img {
     font-size: 2.5rem;
 }
 
-#bg-shop-blocks ul {
+#bg-shop-blocks .align-spaced ul {
     margin: 2em 0 3em;
 }
 
@@ -280,8 +290,13 @@ a img {
         padding: 0;  
     }
 
-    #bg-books ul {
+    #bg-books ul,
+    #bg-shop-blocks ul {
         margin: 0.5em 0 0 0;
+    }
+
+    header nav {
+        text-align: right;
     }
 
     header nav li {
@@ -291,9 +306,18 @@ a img {
     header nav ul a {
         text-transform: uppercase;
         color: #46423F;
-        margin-left: 4em;
+        margin-left: 3.5em;
         font-weight: 500;
     } 
+
+    /* header i {
+        padding: 0;
+    } */
+
+    #bg-books li,
+    #bg-shop-blocks li {
+        margin-bottom: 2.2em;
+    }
 
 
     nav a:hover {
@@ -356,10 +380,8 @@ a img {
     background-size: cover;
 }
 
-/* I don't think this is working correctly */
-
 #bg-books {
-    background: url(../img/bg-books.jpg);
+    background-image: url(../img/bg-books.jpg);
 }
 
 #bg-books h1 {
@@ -381,10 +403,10 @@ a img {
 }
 
 #bg-shop-blocks {
-    background: url(../img/bg-shop-the-blocks.jpg);
+    background-image: url(../img/bg-shop-the-blocks.jpg);
 }
 
-#bg-shop-blocks div:last-child .large-4 {
+#bg-shop-blocks div:last-child .align-spaced {
     z-index: 1;
     margin-bottom: 4.5em;
 }
@@ -399,7 +421,7 @@ a img {
     background-color: rgba(72, 88, 77, 0.85);
 }
 
-#bg-shop-blocks i {
+#bg-shop-blocks .align-spaced i {
     padding-right: 0.5em;
 }
 
@@ -419,6 +441,10 @@ a img {
     #bg-shop-blocks {
         padding: 4em 0 8em;
     }  
+
+    .header-bg-color {
+        padding: 4.5em 12.5em;
+    }
 }
 
 
@@ -468,11 +494,16 @@ address li {
     line-height: 1.9em;
 }
 
+address a:hover {
+    color: #fff;
+}
+
 address li {
     display: block;
     font-style: normal;
     font-size: .9rem;
     line-height: 1.7rem;
+    word-break: break-all;
 }
 
 @media screen and (min-width: 1024px) {
@@ -505,13 +536,7 @@ address li {
         margin: 0;
     }
 
-    footer .large-5 {
-        margin-right: 3.7em;
-    }
-
-    footer address {
-        margin-right: 1em;
-    }
+    
 
     
 }
@@ -524,7 +549,9 @@ address li {
 }
 
 .owl-carousel {
-    margin: 3em 0 3.5em;
+    margin-top: 3em;
+    margin-bottom: 3.5em;
+    justify-content: space-between;
 }
 
 .carousel {
@@ -540,8 +567,41 @@ address li {
 }
 
 @media screen and (min-width: 1024px) {
+
     .carousel .wrapper {
         display: block;
+    }
+
+    .carousel h2 {
+        text-align: left;
+        position: relative;
+        top: 0; 
+        left: 0;
+    }
+
+    .carousel h2 span {
+        background-color: #FFFAF4;
+        padding-right: 2rem;
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .carousel h2:after {
+        content: '';
+        display: inline-block;
+        width: 100%; 
+        height: 2px;
+        background-color: #C0794B;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: 0;
+    }
+
+    .owl-carousel h3+p {
+        font-style: italic;
     }
 }
 
@@ -556,6 +616,10 @@ address li {
     -ms-background-size: contain;
     background-size: contain;
     height: 13rem;
+}
+
+.soft-cream .book-cover {
+    background-position: left;
 }
 
 #world-we-make {
@@ -604,7 +668,9 @@ address li {
 
 @media screen and (min-width: 1024px) {
 
-    
+    .book-cover {
+        height: 18em;
+    }
     
 }
 
@@ -622,38 +688,38 @@ address li {
     margin-bottom: 1.2em;
 }
 
-#event-block {
+.event-block {
     padding: 5em 0 1em;
 }
 
-#event-block span {
+.event-block span {
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 400;
 }
 
-#event-block h2 {
+.event-block h2 {
     margin: .8em 0 .6em;
 }
 
-#event-block ul {
+.event-block ul {
     list-style-type: none;
     margin: 0 0 1.8em;
 }
 
-#event-block li {
+.event-block li {
     margin-bottom: .8em;
 }
 
-#event-block i {
+.event-block i {
     padding-right: .5em;
 }
 
-#event-block header p {
+.event-block header p {
     margin: 0;
 }
 
-#event-block header p + h2 {
+.event-block header p + h2 {
     margin-top: .4em;
 }
 
@@ -674,8 +740,9 @@ address li {
 }
 
 @media screen and (min-width: 1024px) {
-    
-    
+    .event-block.soft-cream .event-photo {
+        height: auto;
+    }
 }
 
 /* ----- SUBSCRIBE ----- */
@@ -709,10 +776,18 @@ form button {
 
 @media screen and (min-width: 1024px) {
 
-    input {
-        margin-right: 2em;
+    form button {
+        margin: 0;
+    }
+
+    [type="text"],
+    [type="email"]  {
+        margin: 0;
     }
     
+    #subscribe form div:last-child button {
+        width: 100%;
+    }
 }
 
 /*--------------------------------------------------------------
@@ -760,7 +835,7 @@ form button {
 }
 
 .btn-tertiary {
-    background-color: none;
+    background-color: transparent;
     border: 1px #FFFDFB solid;
     padding: 13px 20px;
     text-transform: uppercase;
