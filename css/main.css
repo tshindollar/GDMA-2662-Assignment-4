@@ -108,7 +108,8 @@ p {
         font-size: 1.45rem;
         font-family: 'Noto Sans', sans-serif;
         font-weight: 500;
-        margin-top: 1.5em;
+        margin-top: 1.3em;
+        margin-bottom: 0;
     }
 
     h4 {
@@ -116,7 +117,7 @@ p {
     }
 
     p {
-        line-height: 1.8em;
+        line-height: 1.7em;
     }
  
     
@@ -174,7 +175,8 @@ p {
 }
 
 #offCanvasRight {
-    box-shadow: inset 4px 0 20px rgba(36 18 7 / 18%)
+    box-shadow: inset 4px 0 20px rgba(36 18 7 / 18%);
+    background-color: #FFFDFB;
 }
 
 #offCanvasRight ul{
@@ -229,6 +231,10 @@ a img  {
     padding: 2.7rem 0 0;
 }
 
+nav a:visited {
+    color: #46423F;
+}
+
 .nav {
     z-index: 2;
     position: fixed;
@@ -244,6 +250,8 @@ a img {
 
 #bg-books li {
     margin-bottom: 2.2em;
+    padding: 0;
+    display: block;
 }
 
 /* #bg-books ul a {
@@ -251,7 +259,7 @@ a img {
 }  */
 
 #bg-books ul {
-    margin-top: 3.5em;
+    margin: 3.5em 0 0;
 }
 
 .nav .button {
@@ -310,19 +318,42 @@ a img {
         font-weight: 500;
     } 
 
-    /* header i {
-        padding: 0;
-    } */
+    header nav i {
+        color: #C0794B;
+    }
+
+    #row-1 section {
+        padding-bottom: 0;
+    }
 
     #bg-books li,
     #bg-shop-blocks li {
         margin-bottom: 2.2em;
     }
 
+    #bg-books i,
+    #bg-shop-blocks i {
+        font-size: 1.3em;
+    }
+
+    #bg-books nav i,
+    #bg-shop-blocks nav i {
+        font-size: 1em;
+    }
 
     nav a:hover {
         border-bottom: 2px #C0794B solid;
         color: #46423F;
+    }
+
+    /* nav li a:hover:nth-child(5) {
+        border-bottom: none;
+    } */
+
+
+    #bg-shop-blocks .header-bg-color {
+        padding: 3.5em 5em;
+        text-align: left;
     }
 
 
@@ -388,6 +419,11 @@ a img {
     line-height: 3.95rem;
 }
 
+
+#bg-books .header-bg-color {
+    margin: 0 auto;
+}
+
 #bg-books span {
     font-size: 1rem;
     text-transform: uppercase;
@@ -395,7 +431,7 @@ a img {
 }
 
 #bg-books .text-center p+p {
-    margin: 2em 0 3em;
+    margin: 2em 0 4em;
 }
 
 #bg-books:before {
@@ -404,6 +440,10 @@ a img {
 
 #bg-shop-blocks {
     background-image: url(../img/bg-shop-the-blocks.jpg);
+}
+
+#bg-shop-blocks h1 {
+    margin-bottom: .75em;
 }
 
 #bg-shop-blocks div:last-child .align-spaced {
@@ -430,6 +470,14 @@ a img {
     padding: 4.5em 1.6em; 
 }
 
+.header-bg-color li {
+    display: inline-block;
+}
+
+.header-bg-color li:first-child {
+    padding-right: .7em;
+}
+
 
 @media screen and (min-width: 1024px) {
 
@@ -443,7 +491,26 @@ a img {
     }  
 
     .header-bg-color {
-        padding: 4.5em 12.5em;
+        padding: 4.5em 12em;
+    }
+
+    #bg-shop-blocks .header-bg-color {
+        margin: 4em 0;
+    }
+
+    #bg-shop-blocks .align-spaced li {
+        margin-bottom: 1.2em;
+    }
+
+    #bg-shop-blocks div:last-child .align-spaced {
+        margin-top: 8.5em;
+        text-align: left;
+    }
+
+    #bg-shop-blocks .header-bg-color p:first-child {
+        font-weight: 500;
+        font-size: 1.3em;
+        margin-bottom: .4em;
     }
 }
 
@@ -509,7 +576,7 @@ address li {
 @media screen and (min-width: 1024px) {
 
     footer {
-        padding: 6em 0;
+        padding: 5em 0 4em;
     }
 
     footer img {
@@ -534,6 +601,11 @@ address li {
 
     footer a+ul {
         margin: 0;
+    }
+
+    footer a:hover,
+    footer a:visited {
+        color: #fff;
     }
 
     
@@ -568,6 +640,10 @@ address li {
 
 @media screen and (min-width: 1024px) {
 
+    .owl-carousel {
+        margin-bottom: 5.5em;
+    }
+
     .carousel .wrapper {
         display: block;
     }
@@ -593,7 +669,7 @@ address li {
         display: inline-block;
         width: 100%; 
         height: 2px;
-        background-color: #C0794B;
+        background-color: #C7853E;
         position: absolute;
         top: 50%;
         left: 0;
@@ -602,6 +678,25 @@ address li {
 
     .owl-carousel h3+p {
         font-style: italic;
+        margin-bottom: 1em;
+    }
+
+    .owl-carousel p {
+        margin-right: 1em;
+    }
+
+    .carousel {
+        padding: 5em 0 6em;
+    }
+
+    .owl-carousel section:nth-child(4),
+    .owl-carousel section:nth-child(5),
+    .owl-carousel section:last-child {
+        margin-top: 3.5em;
+    }
+    
+    .carousel.lighter-soft-cream section {
+        margin: 0;
     }
 }
 
@@ -694,7 +789,7 @@ address li {
 
 .event-block span {
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 400;
 }
 
@@ -704,15 +799,13 @@ address li {
 
 .event-block ul {
     list-style-type: none;
-    margin: 0 0 1.8em;
+    margin: 0 0 1em;
 }
 
-.event-block li {
-    margin-bottom: .8em;
-}
 
 .event-block i {
     padding-right: .5em;
+    font-size: 1.3em;
 }
 
 .event-block header p {
@@ -720,7 +813,7 @@ address li {
 }
 
 .event-block header p + h2 {
-    margin-top: .4em;
+    margin-top: .6em;
 }
 
 #author-reading {
@@ -739,9 +832,27 @@ address li {
     background-image: url(../img/bg-art-gallery.jpg);
 }
 
+.event-block li {
+    margin-bottom: .8em;
+    font-size: .9em;
+    display: block;
+    margin-right: 1em;
+}
+
 @media screen and (min-width: 1024px) {
     .event-block.soft-cream .event-photo {
         height: auto;
+    }
+
+    .event-block li {
+        display: inline-block;
+        margin-bottom: 0.8em;
+        font-size: .9em;
+        margin-right: 1em;
+    }
+
+    .event-block {
+        padding: 5em 0;
     }
 }
 
@@ -749,11 +860,11 @@ address li {
 
 #subscribe {
     background-color: #F3F4ED;
-    padding: 4em 0;
+    padding: 5em 0;
 }
 
 #subscribe h2 {
-    margin-bottom: .6em;
+    margin-bottom: .4em;
 }
 
 form {
@@ -771,13 +882,25 @@ form button {
     border-radius: 4px;
     border: 1px #46423F solid;
     color: #46423F;
-    background-color: #fff
+    background-color: #fff;
+}
+
+address p {
+    font-size: 1.2rem;
+    font-style: normal;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'IBM Plex Serif', serif; 
+    font-weight: 600;
+    margin: 3em 0 0.9em;
+    
 }
 
 @media screen and (min-width: 1024px) {
 
     form button {
         margin: 0;
+        padding: 16px 32px;
     }
 
     [type="text"],
@@ -787,6 +910,16 @@ form button {
     
     #subscribe form div:last-child button {
         width: 100%;
+    }
+
+    #subscribe p {
+        font-size: 1.15rem;
+        margin-bottom: 2.5em;
+        
+    }
+
+    address p {
+        margin: 0;
     }
 }
 
@@ -807,7 +940,13 @@ form button {
 .btn-primary,
 .btn-secondary,
 .btn-tertiary {
-    font-size: 1.1rem;
+    font-size: .9rem;
+}
+
+.btn-primary:visited,
+.btn-secondary:visited,
+.btn-tertiary:visited {
+    color: #fff;
 }
 
 .btn-primary,
@@ -816,9 +955,10 @@ form button {
     border-radius: 4px;
 }
 
+
 .btn-primary {
     background-color: #8D4517;
-    padding: 13px 20px;
+    padding: 14px 30px;
 }
 
 .btn-primary:hover {
@@ -827,7 +967,7 @@ form button {
 
 .btn-secondary {
     background-color: #32453F;
-    padding: 15px 32px;
+    padding: 14px 30px;
 }
 
 .btn-secondary:hover {
@@ -837,13 +977,27 @@ form button {
 .btn-tertiary {
     background-color: transparent;
     border: 1px #FFFDFB solid;
-    padding: 13px 20px;
+    padding: 14px 30px;
     text-transform: uppercase;
 }
 
 .btn-tertiary:hover {
     background-color: #FFFDFB;
     color: #46423F;
+}
+
+@media screen and (min-width: 1024px) {
+    .btn-primary,
+    .btn-secondary,
+    .btn-tertiary {
+        padding: 16px 30px;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .btn-tertiary {
+    font-size: 1rem;
+}
 }
 
 /* ----- BG-COLOR ----- */
