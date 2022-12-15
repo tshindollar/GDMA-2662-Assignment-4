@@ -7,12 +7,23 @@
 2.0 - Tools: globally used mixins and functions. Use for preprocessor only.
 3.0 - Generic: reset and/or normalize styles, box-sizing definition, etc. 
 4.0 - Elements: styling for bare/generic HTML elements 
-       
+        - Typography: Headings, Paragraphs, Blockquotes, Anchors, Lists, Color
 5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks
-
+        - Framwork
 6.0 - Components: specific designed components
-       
+        - Off Canvas
+        - Nav
+        - Hero 
+        - Footer 
+        - Carousel 
+        - Book Cover 
+        - Event Block 
+        - Subscribe 
 7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
+        - Buttons 
+        - Bg Color 
+        - Margin 
+        - Screenreader
 
 --------------------------------------------------------------*/
 
@@ -23,6 +34,30 @@
 
 /* ----- UNIVERSAL ----- */
 
+html {
+    font: 1rem 'Noto Sans', sans-serif;
+
+}
+
+@media screen and (min-width: 768px) {
+
+    html {
+        font: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    html {
+        font: .9rem;
+    }
+}
+
+
+/*--------------------------------------------------------------
+    4.0 - ELEMENTS
+-------------------------------------------------------------- */
+
+/* ----- TYPOGRAPHY ----- */
 h1,
 h2,
 h3,
@@ -57,11 +92,6 @@ h4 {
     text-transform: uppercase;
 }
 
-body {
-    font: 1rem'Noto Sans', sans-serif;
-    color: #46423F;
-}
-
 h1 {
     font-size: 2.5rem;
     line-height: 2.95rem;
@@ -84,8 +114,21 @@ p {
 }
 
 @media screen and (min-width: 40em) {
-    html {
-        font: 1.2rem;
+
+    h1 {
+        font-size: 2.7rem;
+    }
+
+    h3 {
+        font-size: 2.4rem;
+    }
+
+    li {
+        font-size: 1.2rem;
+    }
+
+    p {
+        line-height: 2em;
     }
 }
 
@@ -94,10 +137,6 @@ p {
     li,
     p {
         font-size: 1rem;
-    }
-
-    html {
-        font: .9rem;
     }
 
     h1 {
@@ -120,19 +159,8 @@ p {
         line-height: 1.7em;
     }
  
-    
 }
 
-
-/*--------------------------------------------------------------
-    4.0 - ELEMENTS
--------------------------------------------------------------- */
-
-/* ----- TYPOGRAPHY ----- */
-
-/* ----- ANCHOR ----- */
-
-/* ----- HERO ----- */
 
 /*--------------------------------------------------------------
     5.0 - OBJECTS
@@ -149,14 +177,14 @@ p {
     max-width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 40em) {
 
     .wrapper {
         width: 80%;
     }    
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
 
     .wrapper {
         width: 70%;
@@ -226,9 +254,12 @@ p {
     list-style-type: none;
 }
 
-.nav .button,
+.nav .button {
+    padding: 1em 0 0;
+}
+
 a img  {
-    padding: 2.7rem 0 0;
+    padding: 2.7em 0 0;
 }
 
 nav a:visited {
@@ -244,19 +275,14 @@ nav a:visited {
 }
 
 a img {
-    width: 2rem;
+    width: 2em;
     margin: 0;
 }
 
 #bg-books li {
-    margin-bottom: 2.2em;
+    margin-bottom: 2em;
     padding: 0;
-    display: block;
 }
-
-/* #bg-books ul a {
-    text-transform: capitalize;
-}  */
 
 #bg-books ul {
     margin: 3.5em 0 0;
@@ -268,22 +294,33 @@ a img {
 }
 
 #bg-shop-blocks .align-spaced ul {
-    margin: 2em 0 3em;
+    margin: 2em 0 2.6em;
 }
 
 #bg-shop-blocks li {
     margin-bottom: 1.1em;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 40em) {
 
     .wrapper {
         width: 80%;
-    }    
+    }   
+    
+    a img {
+        width: 2.1rem;
+        padding-bottom: 1.5em
+    }
+
 }
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
+
+    header nav ul a,
+    nav a:hover {
+        color: #46423F;
+    }
 
     .wrapper {
         width: 70%;
@@ -313,7 +350,6 @@ a img {
 
     header nav ul a {
         text-transform: uppercase;
-        color: #46423F;
         margin-left: 3.5em;
         font-weight: 500;
     } 
@@ -338,31 +374,14 @@ a img {
 
     #bg-books nav i,
     #bg-shop-blocks nav i {
-        font-size: 1em;
+        font-size: 1rem;
     }
 
     nav a:hover {
         border-bottom: 2px #C0794B solid;
-        color: #46423F;
     }
 
-    /* nav li a:hover:nth-child(5) {
-        border-bottom: none;
-    } */
-
-
-    #bg-shop-blocks .header-bg-color {
-        padding: 3.5em 5em;
-        text-align: left;
-    }
-
-
-    /* #bg-books div {
-        padding: 2.5em 0 1.5em;
-    } */
 }
-
-
 
 /* ----- HERO ----- */
 
@@ -416,7 +435,7 @@ a img {
 }
 
 #bg-books h1 {
-    line-height: 3.95rem;
+    line-height: 2em;
 }
 
 
@@ -431,7 +450,7 @@ a img {
 }
 
 #bg-books .text-center p+p {
-    margin: 2em 0 4em;
+    margin: 2em 0 3em;
 }
 
 #bg-books:before {
@@ -452,8 +471,8 @@ a img {
 }
 
 #bg-shop-blocks .header-bg-color p:first-child {
-    font-size: 1.4em;
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: 500;
     margin-bottom: .8em;
 }
 
@@ -467,28 +486,65 @@ a img {
 
 .header-bg-color {
     background-color: #FFFDFB;
-    padding: 4.5em 1.6em; 
-}
-
-.header-bg-color li {
-    display: inline-block;
+    padding: 4em 2em; 
 }
 
 .header-bg-color li:first-child {
     padding-right: .7em;
 }
 
+@media screen and (min-width: 40em) {
 
-@media screen and (min-width: 1024px) {
-
-    #bg-books span {
-        font-size: 1.2rem;
+    #bg-shop-blocks .header-bg-color p:first-child {
+        font-size: 1.3rem;
+        line-height: 2em;
+        margin-bottom: 0;
     }
 
+    .bg-books .btn-primary li,
+    .header-bg-color li {
+        display: block;
+    }
+
+    #bg-books .text-center p+p {
+        margin: 2em 0 3em;
+    }
+
+    .header-bg-color {
+        padding: 3.5em 3.3em 3em; 
+    }
+
+    #bg-shop-blocks h1 {
+        font-size: 3.6rem;
+        line-height: 4rem;
+        margin: .8em .25em .65em;
+    }
+
+    #bg-books h1 {
+        line-height: 1.5em;
+        margin-bottom: .2em;
+    }
+}
+
+@media screen and (min-width: 64em) {
+
+    #bg-shop-blocks div:last-child .align-spaced,
+    #bg-shop-blocks .header-bg-color {
+        text-align: left;
+    }
+    
     #bg-books,
     #bg-shop-blocks {
         padding: 4em 0 8em;
     }  
+
+    #bg-shop-blocks h1 {
+        margin: 0;
+    }
+
+    #bg-books span {
+        font-size: 1.2rem;
+    }
 
     .header-bg-color {
         padding: 4.5em 12em;
@@ -503,14 +559,21 @@ a img {
     }
 
     #bg-shop-blocks div:last-child .align-spaced {
-        margin-top: 8.5em;
-        text-align: left;
+        margin-top: 8em;
     }
 
     #bg-shop-blocks .header-bg-color p:first-child {
         font-weight: 500;
-        font-size: 1.3em;
+        font-size: 1.3rem;
         margin-bottom: .4em;
+    }
+
+    .header-bg-color li {
+        display: inline-block;
+    }
+
+    #bg-shop-blocks .header-bg-color {
+        padding: 3.5em 5em;
     }
 }
 
@@ -522,6 +585,12 @@ footer a {
     color: #fff;
 }
 
+footer p,
+address li {
+    font-size: .9rem;
+    line-height: 1.9em;
+}
+
 footer {
     background-color: #32453F;
     padding: 5em 0;
@@ -531,7 +600,6 @@ footer li {
     list-style-type: none;
     display: inline-block;
 }
-
 
 footer img {
     padding: 0 0 0 23px;
@@ -547,18 +615,12 @@ footer a+ul {
 }
 
 .fa-brands {
-    font-size: 1.3em;
+    font-size: 1.3rem;
     padding: 0 .3em;
 } 
 
 address ul {
     margin: 0;
-}
-
-footer p,
-address li {
-    font-size: .9rem;
-    line-height: 1.9em;
 }
 
 address a:hover {
@@ -569,11 +631,22 @@ address li {
     display: block;
     font-style: normal;
     font-size: .9rem;
-    line-height: 1.7rem;
+    line-height: 1.7em;
     word-break: break-all;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
+
+    footer a:hover,
+    footer a:visited {
+        color: #fff;
+    }
+
+    footer div div:first-child,
+    address,
+    footer section {
+        text-align: left;
+    }
 
     footer {
         padding: 5em 0 4em;
@@ -583,12 +656,6 @@ address li {
         margin-bottom: 1em;
         padding: 0;
         width: 200px;
-    }
-    
-    footer div div:first-child,
-    address,
-    footer section {
-        text-align: left;
     }
 
     .fa-square-facebook {
@@ -603,14 +670,6 @@ address li {
         margin: 0;
     }
 
-    footer a:hover,
-    footer a:visited {
-        color: #fff;
-    }
-
-    
-
-    
 }
 
 /* ----- CAROUSEL ----- */
@@ -638,8 +697,21 @@ address li {
     padding: 0 1rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
 
+    .owl-carousel section:nth-child(4),
+    .owl-carousel section:nth-child(5),
+    .owl-carousel section:last-child {
+        margin-top: 4.5em;
+    }
+
+    .carousel h2,
+    .carousel h2 span {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    
     .owl-carousel {
         margin-bottom: 5.5em;
     }
@@ -650,17 +722,11 @@ address li {
 
     .carousel h2 {
         text-align: left;
-        position: relative;
-        top: 0; 
-        left: 0;
     }
 
     .carousel h2 span {
         background-color: #FFFAF4;
-        padding-right: 2rem;
-        position: relative;
-        top: 0;
-        left: 0;
+        padding-right: 2em;
         z-index: 1;
     }
 
@@ -687,12 +753,6 @@ address li {
 
     .carousel {
         padding: 5em 0 6em;
-    }
-
-    .owl-carousel section:nth-child(4),
-    .owl-carousel section:nth-child(5),
-    .owl-carousel section:last-child {
-        margin-top: 3.5em;
     }
     
     .carousel.lighter-soft-cream section {
@@ -761,10 +821,10 @@ address li {
     background-image: url(../img/bg-song-achilles.jpg);
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
 
     .book-cover {
-        height: 18em;
+        height: 18rem;
     }
     
 }
@@ -805,7 +865,7 @@ address li {
 
 .event-block i {
     padding-right: .5em;
-    font-size: 1.3em;
+    font-size: 1.3rem;
 }
 
 .event-block header p {
@@ -834,12 +894,16 @@ address li {
 
 .event-block li {
     margin-bottom: .8em;
-    font-size: .9em;
+    font-size: 1.1em;
     display: block;
     margin-right: 1em;
 }
 
-@media screen and (min-width: 1024px) {
+.event-photo section > p {
+    margin-top: 1.5em;
+}
+
+@media screen and (min-width: 64em) {
     .event-block.soft-cream .event-photo {
         height: auto;
     }
@@ -847,7 +911,7 @@ address li {
     .event-block li {
         display: inline-block;
         margin-bottom: 0.8em;
-        font-size: .9em;
+        font-size: .9rem;
         margin-right: 1em;
     }
 
@@ -875,7 +939,6 @@ form button {
     margin-top: 1.2em;
 }
 
-/* not applying */
 [type="text"],
 [type="email"] {
     height: 3em;
@@ -896,7 +959,7 @@ address p {
     
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 64em) {
 
     form button {
         margin: 0;
@@ -915,7 +978,6 @@ address p {
     #subscribe p {
         font-size: 1.15rem;
         margin-bottom: 2.5em;
-        
     }
 
     address p {
@@ -940,7 +1002,7 @@ address p {
 .btn-primary,
 .btn-secondary,
 .btn-tertiary {
-    font-size: .9rem;
+    font-size: 1rem;
 }
 
 .btn-primary:visited,
@@ -954,7 +1016,6 @@ address p {
 .btn-tertiary {
     border-radius: 4px;
 }
-
 
 .btn-primary {
     background-color: #8D4517;
@@ -986,18 +1047,19 @@ address p {
     color: #46423F;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 40em) {
+    .button {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 64em) {
     .btn-primary,
     .btn-secondary,
     .btn-tertiary {
         padding: 16px 30px;
     }
 
-    .btn-primary,
-    .btn-secondary,
-    .btn-tertiary {
-    font-size: 1rem;
-}
 }
 
 /* ----- BG-COLOR ----- */
@@ -1013,7 +1075,11 @@ address p {
 /* ----- MARGIN----- */
 
 .margin {
-    margin: 2.5em 0 3em;
+    margin: 2.5em 0 3.5em;
+}
+
+.event-p-margin {
+    margin-top: 1.5em;
 }
 
 /* ----- SCREENREADER ----- */
